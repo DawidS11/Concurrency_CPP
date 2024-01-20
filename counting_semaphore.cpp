@@ -11,7 +11,7 @@ Semaphore is set two 1 so both subtraction and addition may occur first.
 Mutexes are used in order not to subtract/add at the same time.
 */
 
-// g++ -std=c++20 semaphore.cpp -o prog
+// g++ -std=c++20 counting_semaphore.cpp -o prog
 
 std::counting_semaphore gSemaphore{1};
 
