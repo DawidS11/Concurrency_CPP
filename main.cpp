@@ -26,8 +26,9 @@ int main() {
     start = time(0);
     while(isRunning) {
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        system("clear");
         for(int i = 0; i < 4; ++i) {
-            std::cout << std::setw(5) << vals[i] << std::setw(5);
+            std::cout << vals[i] << std::setw(5);
         }
         timeLeft = 10 - (time(0) - start);
         isRunning = timeLeft > 0;
