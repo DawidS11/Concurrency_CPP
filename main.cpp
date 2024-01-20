@@ -8,7 +8,7 @@ bool isRunning = true;
 
 void change_vals(std::vector<int>& vec, int index) {
     while(isRunning) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(200*(index+1)));
         vec[index] = rand() % 100;
     }
 }
@@ -25,10 +25,10 @@ int main() {
 
     start = time(0);
     while(isRunning) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-        system("clear");
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        //system("clear");
         for(int i = 0; i < 4; ++i) {
-            std::cout << vals[i] << std::setw(5);
+            std::cout << std::setw(5) << vals[i] << std::setw(5);
         }
         timeLeft = 10 - (time(0) - start);
         isRunning = timeLeft > 0;
@@ -37,6 +37,4 @@ int main() {
     for(auto& t : threads) {
         t.join();
     }
-    
-    
 }
