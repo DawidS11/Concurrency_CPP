@@ -3,7 +3,7 @@
 #include <vector>
 #include <iomanip>
 
-// g++ -std=c++20 main.cpp -o prog
+// g++ -std=c++20 vector_vals.cpp -o prog
 bool isRunning = true;
 
 void change_vals(std::vector<int>& vec, int index) {
