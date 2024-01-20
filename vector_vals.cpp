@@ -6,7 +6,7 @@
 #include <atomic>
 
 // g++ -fsanitize=thread -std=c++20 vector_vals.cpp -o prog
-bool isRunning = true;
+
 time_t start = time(0);
 std::mutex myLock;
 std::atomic<time_t> timeLeft = 10;
